@@ -1,5 +1,5 @@
 const sut = require('./find-closest-value-in-bst')
-const BST = require('./binary-search-tree')
+const BST = require('../binary-search-tree')
 
 describe('Find Closest Value In BST', () => {
   test('Sample Input should return Sample Output', () => {
