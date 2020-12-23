@@ -1,3 +1,5 @@
+// Average: O(log(n)) time | O(log(n)) space
+// Worst: O(n) time | O(n) space
 module.exports = (tree, target) => {
   const result = findClosestValue(tree, target, tree.value)
   return result
