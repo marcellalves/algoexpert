@@ -9,6 +9,7 @@ describe('Branch Sums', () => {
     root.left.left.left = new BST(8);
     root.left.left.right = new BST(9);
     root.left.right = new BST(5);
+    root.left.right.left = new BST(10);
     root.right = new BST(3);
     root.right.left = new BST(6);
     root.right.right = new BST(7);

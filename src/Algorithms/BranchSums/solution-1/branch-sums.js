@@ -1,37 +1,22 @@
+// O(n) time | O(n) space
 module.exports = (tree) => {
-  let sumArray = []
-  if (tree.left !== null) {
-    sumLeft(tree.left, tree.value, sumArray)
-  }
-  if (tree.right !== null) {
-    sumRight(tree.right, tree.value, sumArray)
-  }
-
-  return sumArray
+  let sums = []
+  calculateBranchSums(tree, 0, sums)
+  return sums
 }
 
-function sumLeft (node, sum, sumArray) {
-  if (node !== null) {
-    sum = sum + node.value
-
-    if (node.left !== null) {
-      return sumLeft(node.left, sum, sumArray)
-    } else {
-      sumArray.push(sum)
-      return sumRight(node.right)
-    }
+function calculateBranchSums(node, sum, sums) {
+  if (node === null) {
+    return
   }
-}
 
-function sumRight (node, sum, sumArray) {
-  if (node !== null) {
-    sum = sum + node.value
+  const newSum = sum + node.value
 
-    if (node.right !== null) {
-      return sumRight(node.right, sum, sumArray)
-    } else {
-      sumArray.push(sum)
-      return
-    }
+  if (node.left === null && node.right === null) {
+    sums.push(newSum)
+    return
   }
+
+  calculateBranchSums(node.left, newSum, sums)
+  calculateBranchSums(node.right, newSum, sums)
 }
