@@ -1,3 +1,4 @@
+// O(n) time | O(n) space complexity
 module.exports = (tree) => {
   const depths = []
   calculateSumNodeDepths(tree, 0, depths)
