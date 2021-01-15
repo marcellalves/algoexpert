@@ -2,26 +2,15 @@ const Node = require('./depth-first-search')
 
 describe('Depth First Search', () => {
   test('Sample Input should return Sample Output', () => {
-    const nodeA = new Node('A')
-    const nodeB = new Node('B')
-    nodeA.addChild(nodeB)
-    nodeA.addChild(new Node('C'))
-    const nodeD = new Node('D')
-    nodeB.addChild(new Node('E'))
-    const nodeF = new Node('F')
-    nodeB.addChild(nodeF)
-    const nodeG = new Node('G')
-    nodeD.addChild(nodeG)
-    nodeD.addChild(new Node('H'))
-    nodeF.addChild(new Node('I'))
-    nodeF.addChild(new Node('J'))
-    nodeG.addChild(new Node('K'))
+    const graph = new Node('A')
+    graph.addChild('B').addChild('C').addChild('D')
+    graph.children[0].addChild('E').addChild('F')
+    graph.children[2].addChild('G').addChild('H')
+    graph.children[0].children[1].addChild('I').addChild('J')
+    graph.children[2].children[0].addChild('K')
 
-    nodeA.currentNode = nodeA
-    nodeA.stack = []
+    const result = graph.depthFirstSearch([])
 
-    const result = nodeA.depthFirstSearch([])
-
-    expect(result).toEqual(['A', 'B', 'E', 'F', 'I', 'J', 'C', 'D', 'G', 'K'])
+    expect(result).toEqual(['A', 'B', 'E', 'F', 'I', 'J', 'C', 'D', 'G', 'K', 'H'])
   })
 })
