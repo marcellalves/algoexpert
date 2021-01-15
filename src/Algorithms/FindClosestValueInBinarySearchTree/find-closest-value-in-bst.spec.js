@@ -1,6 +1,6 @@
 const solution1 = require('./solution-1/find-closest-value-in-bst-o-log-n-with-recursion')
 const solution2 = require('./solution-2/find-closest-value-in-bst-o-log-n-without-recursion')
-const BST = require('./bst')
+const BST = require('../../DataStructures/BST/simplifyed-binary-tree')
 
 const makeTree = () => {
   const root = new BST(10)
