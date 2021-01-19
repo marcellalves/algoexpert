@@ -1,3 +1,4 @@
+// O(2^n) time | O(n) space
 function nthFibonacci (n) {
   if (n === 2) {
     return 1
