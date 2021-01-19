@@ -1,5 +1,6 @@
 const nthFibonacciSolution1 = require('./solution-1/nth-fibonacci')
 const nthFibonacciSolution2 = require('./solution-2/nth-fibonacci')
+const nthFibonacciSolution3 = require('./solution-3/nth-fibonacci')
 
 describe('Nth Fibonacci', () => {
   test('Solution 1 - First Sample Input should return Sample Output', () => {
@@ -22,6 +23,18 @@ describe('Nth Fibonacci', () => {
 
   test('Solution 2 - Second Sample Input should return Sample Output', () => {
     const result = nthFibonacciSolution2(6)
+
+    expect(result).toEqual(5)
+  })
+  
+  test('Solution 3 - First Sample Input should return Sample Output', () => {
+    const result = nthFibonacciSolution3(2)
+
+    expect(result).toEqual(1)
+  })
+
+  test('Solution 3 - Second Sample Input should return Sample Output', () => {
+    const result = nthFibonacciSolution3(6)
 
     expect(result).toEqual(5)
   })
