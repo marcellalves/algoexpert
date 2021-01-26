@@ -1,5 +1,15 @@
 function productSum(array, depth = 1) {
-  return 12
+  let sum = 0
+
+  for (const value of array) {
+    if (Array.isArray(value)) {
+      sum += productSum(value, depth + 1)
+    } else {
+      sum += value
+    }
+  }
+
+  return sum * depth
 }
 
 module.exports = productSum
