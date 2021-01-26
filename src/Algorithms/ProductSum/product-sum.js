@@ -1,3 +1,4 @@
+// O(n) time | O(d) space - where d is the maximum depth of inner arrays
 function productSum(array, depth = 1) {
   let sum = 0
 
