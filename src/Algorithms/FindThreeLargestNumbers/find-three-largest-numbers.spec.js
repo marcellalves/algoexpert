@@ -7,5 +7,5 @@ describe('Find Three Largest Numbers', () => {
     const result = findThreeLargestNumbers(input)
     
     expect(result).toEqual([18, 141, 541])
-  });
+  })
 })
