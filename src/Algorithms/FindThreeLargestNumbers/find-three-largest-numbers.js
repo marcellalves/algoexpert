@@ -4,7 +4,7 @@ module.exports = (input) => {
   let biggestValues = []
 
   for (let j = 0; j <= 2; j++) {
-    let biggestValue = 0
+    let biggestValue = -999
     let biggestIndex = -1
     
     for (let i = 0; i < input.length; i ++) {
