@@ -1,3 +1,7 @@
+const { getDataExtractorApi } = require('@hediet/debug-visualizer-data-extraction')
+
+getDataExtractorApi().registerDefaultExtractors();
+
 function binarySearchArray (array, target) {
   let begin = 0
   let end = array.length - 1

@@ -12,5 +12,9 @@
   "devDependencies": {
     "@types/jest": "^26.0.16",
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@hediet/debug-visualizer-data-extraction": "^0.13.1",
+    "@hediet/node-reload": "^0.7.3"
   }
 }

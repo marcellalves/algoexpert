@@ -1,3 +1,7 @@
+const { getDataExtractorApi } = require('@hediet/debug-visualizer-data-extraction')
+
+getDataExtractorApi().registerDefaultExtractors();
+
 // O(n) time | O(n) space
 module.exports = (input) => {
   let biggestValuesIndexes = []
