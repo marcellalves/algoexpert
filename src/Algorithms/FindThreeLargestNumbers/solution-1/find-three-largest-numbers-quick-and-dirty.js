@@ -2,6 +2,16 @@ const { getDataExtractorApi } = require('@hediet/debug-visualizer-data-extractio
 
 getDataExtractorApi().registerDefaultExtractors();
 
+/*
+Visualize this expression:
+
+hedietDbgVis.markedGrid(
+    array,
+    hedietDbgVis.tryEval(["i", "j", "left", "right"])
+)
+
+*/
+
 // O(n) time | O(1) space
 module.exports = (input) => {
   let biggestValuesIndexes = []
