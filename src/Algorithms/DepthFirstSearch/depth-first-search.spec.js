@@ -11,6 +11,6 @@ describe('Depth First Search', () => {
 
     const result = graph.depthFirstSearch([])
 
-    expect(result).toEqual(['A', 'B', 'E', 'F', 'I', 'J', 'C', 'D', 'G', 'K', 'H'])
+  expect(result).toEqual(['A', 'B', 'E', 'F', 'I', 'J', 'C', 'D', 'G', 'K', 'H'])
   })
 })
